@@ -1,0 +1,10 @@
+Package: hcitools
+Type: Package
+Title: Help HCI researchers
+Version: 1.0
+Date: 2015-04-03
+Author: Vassilis Kostakos
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: Tools for HCI
+Depends: R (>= 2.10)
+License: CC0
