@@ -9,10 +9,11 @@
 data(SUSresponses)
 }
 \description{
-a dataset for testing use of Roxygen2 to document datasets
+A sample dataset containing SUS questionnaire responses.
 }
 \examples{
 data(SUSresponses)
+questionnaires_analyse(SUSresponses,"SUS")
 }
 \keyword{datasets}
 
