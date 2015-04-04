@@ -1,6 +1,6 @@
 #' SUS dataset
 #'
-#' a dataset for testing use of Roxygen2 to document datasets
+#' A sample dataset containing SUS questionnaire responses.
 #'
 #' @name SUSresponses
 #' @docType data
@@ -13,4 +13,5 @@
 #'
 #' @examples
 #' data(SUSresponses)
+#' questionnaires_analyse(SUSresponses,"SUS")
 NULL
