@@ -10,7 +10,7 @@ questionnaires_show(name = c("SUS", "Big5", "Big10"))
 \item{name}{the name of the questionaire. Can be 'SUS', 'Big5', etc.}
 }
 \value{
-a text object
+Prints instructions, the questionnaire in plain text, and a citation.
 }
 \description{
 \code{questionnaires_show} will simply print out a standard questionnaire,

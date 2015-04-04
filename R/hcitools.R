@@ -4,7 +4,7 @@
 #' and the citation for it
 #'
 #' @param name the name of the questionaire. Can be 'SUS', 'Big5', etc.
-#' @return a text object
+#' @return Prints instructions, the questionnaire in plain text, and a citation.
 #' @examples 
 #' questionnaires_show('SUS')
 questionnaires_show <- function(name = c("SUS", "Big5", "Big10")) {
