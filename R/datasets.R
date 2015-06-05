@@ -13,5 +13,5 @@
 #'
 #' @examples
 #' data(SUSresponses)
-#' questionnaires_analyse(SUSresponses,"SUS")
+#' questionnaire_analyse(SUSresponses,"SUS")
 NULL

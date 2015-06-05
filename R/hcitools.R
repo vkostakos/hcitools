@@ -1,13 +1,13 @@
 #' Print a version of a standardised questionnaire
 #' 
-#' \code{questionnaires_show} will simply print out a standard questionnaire, 
+#' \code{questionnaire_show} will simply print out a standard questionnaire, 
 #' and the citation for it
 #'
 #' @param name the name of the questionaire. Can be 'SUS', 'Big5', etc.
 #' @return Prints instructions, the questionnaire in plain text, and a citation.
 #' @examples 
-#' questionnaires_show('SUS')
-questionnaires_show <- function(name = c("SUS", "Big5", "Big10")) {
+#' questionnaire_show('SUS')
+questionnaire_show <- function(name = c("SUS", "Big5", "Big10")) {
     if (missing(name) | !is.character(name)) {
         stop("The function expects the name of the questionnaire")
     }
@@ -28,26 +28,27 @@ questionnaires_show <- function(name = c("SUS", "Big5", "Big10")) {
 #' @param data A data frame containing questionnaire responses.
 #' @param name The name of the questionaire. Can be 'SUS', 'Big5', etc.
 #' @details The \code{data} must contain all the questions generated 
-#' by \code{\link{questionnaires_show}} as columns in a data frame. The 
+#' by \code{\link{questionnaire_show}} as columns in a data frame. The 
 #' columns must be in the same order as in the questionnaire printed 
-#' by \code{\link{questionnaires_show}}.
+#' by \code{\link{questionnaire_show}}.
 #' @return The analysis of the questionnaire
 #' @examples 
 #' require(hcitools)
 #' data(SUSresponses)
-#' questionnaires_analyse(SUSresponses,'SUS')
-questionnaires_analyse <- function(data, name = c("SUS", "Big5", "Big10")) {
+#' questionnaire_analyse(SUSresponses,'SUS')
+questionnaire_analyse <- function(data, name = c("SUS", "Big5", "Big10")) {
     if (missing(name) | missing(data) | !is.character(name) | !is.data.frame(data)) {
         stop("The function expects a data frame and the name of the questionnaire")
     }
     switch(name, SUS = {
-        names(data) <- c("Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8","Q9","Q10")
+        names(data) <- c("Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8","Q9","Q10 ")
         data[, c("Q1", "Q3", "Q5", "Q7", "Q9")] <- data[, c("Q1", "Q3", "Q5", "Q7", "Q9")] - 
             1
         data[, c("Q2", "Q4", "Q6", "Q8", "Q10")] <- 5 - data[, c("Q2", "Q4", "Q6", "Q8", 
             "Q10")]
-        return(mean(rowSums(data) * 2.5))
+        result <- mean(rowSums(data) * 2.5)
     }, Big5 = {
-        cat("This is Big5")
+        result <- "This is Big5"
     }, stop("The questionnaire name is not recognised"))
+    return(result)
 } 
