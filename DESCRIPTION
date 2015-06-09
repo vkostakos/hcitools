@@ -8,4 +8,6 @@ Maintainer: Who to complain to <yourfault@somewhere.net>
 Description: Tools for HCI
 Depends: R (>= 2.10)
 License: CC0
+Imports:
+    irr
 Suggests: testthat
