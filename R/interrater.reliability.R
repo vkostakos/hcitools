@@ -4,7 +4,7 @@
 #'
 #' @param d the dataset that you want to analyse. Should contain one column per rater.
 #' @param type indicates whether the data to be analysed is categorical or ordinal. If type is ordinal then weights are used. Make sure that for ordinal data the factors are set in the correct order. Use \code{levels(d)} to see the factor levels of your variable
-#' @return The results of teh test, along with details of the analysis
+#' @return The results of the test, along with details of the analysis
 #' @examples 
 #' data(data.Diagnoses)
 #' interrater.reliability(data.Diagnoses[,1:2],type="categorical")
