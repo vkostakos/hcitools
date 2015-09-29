@@ -20,7 +20,7 @@ License: \tab What license is it under? Free as in beer\cr
 An overview of how to use the package, including the most important functions
 }
 \author{
-Vassilis Kostakos, University ofO ulu
+Vassilis Kostakos, University of Oulu
 
 Maintainer: Who to complain to <yourfault@somewhere.net>
 The author and/or maintainer of the package
