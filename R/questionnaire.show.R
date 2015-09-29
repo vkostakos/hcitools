@@ -1,7 +1,7 @@
 #' Print a version of a standardised questionnaire
 #' 
-#' \code{questionnaire.show} will simply print out a standard questionnaire, 
-#' and the citation for it
+#' \code{questionnaire.show} will print out a standard questionnaire, basic instructions, 
+#' and the citation for it.
 #'
 #' @param name the name of the questionaire. Can be 'SUS', 'Big5', etc.
 #' @return Prints instructions, the questionnaire in plain text, and a citation.
