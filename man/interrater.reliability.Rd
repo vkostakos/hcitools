@@ -9,7 +9,7 @@ interrater.reliability(d, type = c("categorical", "ordinal"))
 \arguments{
 \item{d}{the dataset that you want to analyse. Should contain one column per rater.}
 
-\item{type}{indicates whether the data to be analysed is categorical or ordinal. If type is ordinal then weights are used. Make sure that for ordinal data the factors are set in the correct order. Use \code{levels(d)} to see the factor levels of your variable}
+\item{type}{indicates whether the data to be analysed is categorical or ordinal. If type is ordinal then weights are used.  Make sure that for ordinal data the factors are set in the correct order. Use \code{levels(d)} to see the factor levels of your variable}
 }
 \value{
 The results of the test, along with details of the analysis
