@@ -44,6 +44,7 @@ questionnaire.analyse <- function(data, name = c("SUS", "BFI10", "Big10")) {
       neuroticism <-       ((6-data$Q4) + data$Q9)/2
       openness <-          ((6-data$Q5) + data$Q10)/2
       result <- data.frame(extraversion,agreeableness,conscientiousness,neuroticism,openness)
+      return(result)
     },
     error = function(err) {
       if (length(grep("must be the same length",err[1]))>0) {
@@ -59,6 +60,7 @@ questionnaire.analyse <- function(data, name = c("SUS", "BFI10", "Big10")) {
       neuroticism <-       (data$Q4 + (6-data$Q9) + data$Q14 + data$Q19 + (6-data$Q24) + data$Q29 + (6-data$Q34) + data$Q39)/8
       openness <-          (data$Q5 + data$Q10 + data$Q15 + data$Q20 + data$Q25 + data$Q30 + (6-data$Q35) + data$Q40 + (6-data$Q41) + data$Q44)/10
       result <- data.frame(extraversion,agreeableness,conscientiousness,neuroticism,openness)
+      return(result)
     },
     error = function(err) {
       if (length(grep("must be the same length",err[1]))>0) {
